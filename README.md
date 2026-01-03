@@ -4,7 +4,7 @@
 
 Sou desenvolvedora Front-end com foco na construção de interfaces responsivas, funcionais e bem estruturadas. Tenho experiência na transformação de ideias e protótipos em soluções web, unindo tecnologia e senso estético — habilidade que também se reflete na minha atuação como tatuadora.
 
-Atualmente curso Análise e Desenvolvimento de Sistemas e sigo aprofundando meus conhecimentos em Front-end, lógica de programação e boas práticas de desenvolvimento.
+Sou formada em Análise e Desenvolvimento de Sistemas e sigo aprofundando meus conhecimentos em Front-end, lógica de programação e boas práticas de desenvolvimento.
 
 ---
 
