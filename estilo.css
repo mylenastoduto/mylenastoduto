@@ -1,96 +1,266 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mylena Stoduto - Portfólio</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #1744b5 0%, #2e5aa6 50%, #7e8ba3 100%);
+    min-height: 100vh;
+}
 
-<body>
-    <div class="container">
-        <header class="hero">
-            <div class="hero-content">
-                <img src="myphoto.png" alt="Foto de Mylena Stoduto" class="profile-photo">
-                <h1 class="main-title">Mylena Stoduto</h1>
-                <p class="subtitle">Artista Tatuadora & Desenvolvedora Front-End</p>
-            </div>
-        </header>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        <main>
-            <section class="about">
-                <h2>Sobre Mim</h2>
-                <div class="about-content">
-                    <p>Olá! Sou <strong>Mylena Stoduto</strong>, tenho 30 anos e sou uma profissional multifacetada que une arte e tecnologia. Com quatro anos de experiência como artista tatuadora e atualmente cursando Tecnólogo em Análise e Desenvolvimento de Sistemas, me considero uma verdadeira "exploradora do Front-End".</p>
-                    <p>Sempre amei trabalhar com arte, mas hoje transformo essa paixão em projetos web e aplicações para servidores. Criar conteúdos para a Web se tornou minha nova forma de expressão artística, e estou empolgada com os grandes projetos que virão. Esta página é apenas o começo dessa jornada!</p>
-                </div>
-            </section>
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
 
-            <section class="social">
-                <h2>Vamos Conectar?</h2>
-                <div class="social-grid">
-                    <a href="https://api.whatsapp.com/send?phone=5521980252265" target="_blank" rel="noopener noreferrer" class="social-card">
-                        <div class="social-icon">
-                            <img src="whatsapp.png" alt="WhatsApp">
-                        </div>
-                        <div class="social-info">
-                            <h3>WhatsApp</h3>
-                            <p>Entre em contato para orçamentos e dúvidas</p>
-                        </div>
-                    </a>
+.hero-content {
+    animation: fadeIn 1s ease-in;
+}
 
-                    <a href="https://www.instagram.com/myytatua/" target="_blank" rel="noopener noreferrer" class="social-card">
-                        <div class="social-icon">
-                            <img src="instagram.png" alt="Instagram">
-                        </div>
-                        <div class="social-info">
-                            <h3>Instagram</h3>
-                            <p>Acompanhe meus trabalhos e momentos</p>
-                        </div>
-                    </a>
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-                    <a href="https://www.facebook.com/profile.php?id=100086371020742" target="_blank" rel="noopener noreferrer" class="social-card">
-                        <div class="social-icon">
-                            <img src="facebook.png" alt="Facebook">
-                        </div>
-                        <div class="social-info">
-                            <h3>Facebook</h3>
-                            <p>Conecte-se comigo no Facebook</p>
-                        </div>
-                    </a>
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
 
-                    <a href="https://www.tiktok.com/@stodutotattooart" target="_blank" rel="noopener noreferrer" class="social-card">
-                        <div class="social-icon">
-                            <img src="tiktok.png" alt="TikTok">
-                        </div>
-                        <div class="social-info">
-                            <h3>TikTok</h3>
-                            <p>Vídeos dos meus trabalhos de tatuagem</p>
-                        </div>
-                    </a>
+.profile-photo:hover {
+    transform: scale(1.05);
+}
 
-                    <a href="https://github.com/mylenastoduto" target="_blank" rel="noopener noreferrer" class="social-card">
-                        <div class="social-icon">
-                            <img src="github.png" alt="GitHub">
-                        </div>
-                        <div class="social-info">
-                            <h3>GitHub</h3>
-                            <p>Meus projetos e repositórios</p>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </main>
+.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
-        <footer>
-            <p>&copy; 2026 Mylena Stoduto. Todos os direitos reservados.</p>
-        </footer>
-    </div>
-</body>
+.subtitle {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
 
-</html>
+/* About Section */
+.about {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #1e3c72;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    border-radius: 2px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-content p strong {
+    color: #1e3c72;
+    font-weight: 600;
+}
+
+/* Social Section */
+.social {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.social h2 {
+    font-size: 2rem;
+    color: #1e3c72;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.social h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    border-radius: 2px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 2px solid #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(30, 60, 114, 0.4);
+    border-color: #1e3c72;
+}
+
+.social-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.social-card:hover .social-icon img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.social-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.social-info p {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .about,
+    .social {
+        padding: 30px 20px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .about h2,
+    .social h2 {
+        font-size: 1.5rem;
+    }
+}
