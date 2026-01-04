@@ -100,36 +100,36 @@
         function calcularIdade(dataNascimento) {
             const hoje = new Date();
             const nascimento = new Date(dataNascimento);
-            
+
             let idade = hoje.getFullYear() - nascimento.getFullYear();
             const mesAtual = hoje.getMonth();
             const diaAtual = hoje.getDate();
             const mesNascimento = nascimento.getMonth();
             const diaNascimento = nascimento.getDate();
-            
+
             // Verifica se ainda não fez aniversário este ano
             if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
                 idade--;
             }
-            
+
             return idade;
         }
-        
+
         // Função para calcular anos de experiência
         function calcularAnosExperiencia(anoInicio) {
             const hoje = new Date();
             const anoAtual = hoje.getFullYear();
             return anoAtual - anoInicio;
         }
-        
+
         // Data de nascimento: 21/09/1994
         const dataNascimento = '1994-09-21';
         const idade = calcularIdade(dataNascimento);
-        
-        // Ano de início como tatuadora: 2020
-        const anoInicioTatuadora = 2020;
+
+        // Ano de início como tatuadora: 2021
+        const anoInicioTatuadora = 2021;
         const anosExperiencia = calcularAnosExperiencia(anoInicioTatuadora);
-        
+
         // Atualiza os elementos com os valores calculados
         document.getElementById('idade').textContent = idade;
         document.getElementById('anos-experiencia').textContent = anosExperiencia;
