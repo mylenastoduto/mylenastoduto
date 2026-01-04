@@ -29,7 +29,7 @@
             <section class="about">
                 <h2>Sobre Mim</h2>
                 <div class="about-content">
-                    <p>Olá! Sou <strong>Mylena Stoduto</strong>, tenho 30 anos e sou uma profissional multifacetada que une arte e tecnologia. Com quatro anos de experiência como artista tatuadora e formada em Análise e Desenvolvimento de Sistemas, me considero uma verdadeira "exploradora do Front-End".</p>
+                    <p>Olá! Sou <strong>Mylena Stoduto</strong>, tenho <span id="idade">30</span> anos e sou uma profissional multifacetada que une arte e tecnologia. Com quatro anos de experiência como artista tatuadora e formada em Análise e Desenvolvimento de Sistemas, me considero uma verdadeira "exploradora do Front-End".</p>
                     <p>Sempre amei trabalhar com arte, mas hoje transformo essa paixão em projetos web e aplicações para servidores. Criar conteúdos para a Web se tornou minha nova forma de expressão artística, e estou empolgada com os grandes projetos que virão. Esta página é apenas o começo dessa jornada!</p>
                 </div>
             </section>
@@ -94,6 +94,34 @@
             <p>&copy; 2026 Mylena Stoduto. Todos os direitos reservados.</p>
         </footer>
     </div>
+
+    <script>
+        // Função para calcular idade baseada na data de nascimento
+        function calcularIdade(dataNascimento) {
+            const hoje = new Date();
+            const nascimento = new Date(dataNascimento);
+            
+            let idade = hoje.getFullYear() - nascimento.getFullYear();
+            const mesAtual = hoje.getMonth();
+            const diaAtual = hoje.getDate();
+            const mesNascimento = nascimento.getMonth();
+            const diaNascimento = nascimento.getDate();
+            
+            // Verifica se ainda não fez aniversário este ano
+            if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+                idade--;
+            }
+            
+            return idade;
+        }
+        
+        // Data de nascimento: 21/09/1994
+        const dataNascimento = '1994-09-21';
+        const idade = calcularIdade(dataNascimento);
+        
+        // Atualiza o elemento com a idade calculada
+        document.getElementById('idade').textContent = idade;
+    </script>
 </body>
 
 </html>
